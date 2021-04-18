@@ -1,0 +1,12 @@
+{
+    "routes" : [
+        {
+            "route": "/secret/*",
+            "allowedRoles": ["jaiconfianceenlui"]
+        },
+        {
+            "route": "/logout",
+            "redirect": "/.auth/logout"
+        }
+    ]
+  }
