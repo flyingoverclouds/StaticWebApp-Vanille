@@ -6,5 +6,13 @@
 <h1>la page d'accueil de mon site statique - D&eacute;mo 01</h1>
 <br/>
 <a href="superbeimage.jpg">Cliquez moi</a> pour voir une superbe image !
+<hr/>
+Le message vanill&eacute; du jour : <b id="name">...</b>
+    <script>
+        (async function() {
+      let { text } = await( await fetch(`/api/motd`)).json();
+      document.querySelector('#name').textContent = text;
+    }())
+    </script>
 </body>
 </html>
