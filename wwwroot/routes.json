@@ -9,7 +9,7 @@
             "redirect": "/.auth/logout"
         },
         {
-            "route":"secret.html",
+            "route":"/secret.html",
             "redirect" : "/secret/index.html"
         }
     ]
