@@ -2,11 +2,17 @@
     "routes" : [
         {
             "route": "/secret/*",
-            "allowedRoles": ["jaiconfianceenlui"]
+            "allowedRoles": ["jaiconfianceenlui"],
+            "headers": {
+                "Cache-Control": "no-store"
+            }
         },
         {
             "route": "/superbeimage.jpg",
-            "allowedRoles": ["jaiconfianceenlui"]
+            "allowedRoles": ["jaiconfianceenlui"],
+            "headers": {
+                "Cache-Control": "no-store"
+            }
         },
         {
             "route": "/logout",
@@ -20,7 +26,7 @@
     ],
     "navigationFallback": {
         "rewrite": "/index.html",
-        "exclude": ["/images/*.{png,jpg,gif}", "/css/*","/secret/*"]
+        "exclude": ["/*.{png,jpg,gif}", "/css/*","/secret/*"]
       },
       "responseOverrides": {
         "401": {
