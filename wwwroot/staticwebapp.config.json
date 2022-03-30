@@ -5,6 +5,10 @@
             "allowedRoles": ["jaiconfianceenlui"]
         },
         {
+            "route": "/superbeimage.jpg",
+            "allowedRoles": ["jaiconfianceenlui"]
+        },
+        {
             "route": "/logout",
             "redirect": "/.auth/logout"
         },
@@ -12,14 +16,14 @@
             "route": "/api/*",
             "methods": ["PUT", "POST", "PATCH", "DELETE"],
             "allowedRoles": ["administrator"]
-          }
+        }
     ],
     "navigationFallback": {
-        "rewrite": "index.html",
+        "rewrite": "/index.html",
         "exclude": ["/images/*.{png,jpg,gif}", "/css/*","/secret/*"]
       },
       "responseOverrides": {
-        "404": {
+        "401": {
           "rewrite": "/error.html"
         }
       }
