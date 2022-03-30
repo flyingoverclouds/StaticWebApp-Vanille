@@ -7,11 +7,11 @@
 <br/>
 <a href="superbeimage.jpg">Cliquez moi</a> pour voir une superbe image !
 <hr/>
-Le message vanill&eacute; du jour : <b id="name">...</b>
+Le message vanill&eacute; du jour : <b id="motd">...</b>
     <script>
         (async function() {
       let { text } = await( await fetch(`/api/motd`)).json();
-      document.querySelector('#name').textContent = text;
+      document.querySelector('#motd').textContent = text;
     }())
     </script>
 
